@@ -19,7 +19,7 @@ connection {
    }
 # remote provisioners to run any commands or scripts in remote resources
    provisioner "remote-exec" {
-    inline = [ chmod 4000 /tmp/eks-terraform-key.pem ]
+    inline = [ "sudo chmod 400 /tmp/eks-terraform-key.pem" ]
      
    }
 # local provisioners to run any commands or scripts in local machine
