@@ -2,7 +2,7 @@
 # ec2 bastion instance that would creating in myvpc and can be connected to worked nodes
 
 module "ec2-public" {
-  source                 = "terraform-aws-modules/ec2-bastion-instance/aws"
+  source                 = "terraform-aws-modules/ec2-instance/aws"
   version                = "5.8.0"
   name                   = "${local.name}-BastionHost"
   instance_type          = var.instance_type
