@@ -11,5 +11,5 @@ module "ec2-public" {
   availability_zone      = module.vpc.azs
   subnet_id              = module.vpc.public_subnets[0]
   vpc_security_group_ids = [module.public_bastion_sg.security_group_ids]
-  tags                   = local.tags
+  tags                   = local.common_tags
 }
