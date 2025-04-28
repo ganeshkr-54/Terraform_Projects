@@ -1,20 +1,20 @@
 # Create Null Resourse and Provisioners
 resource "null_resource" "copy-ec2-keys" {
-    depends_on = [module.ec2_public]
+    depends_on = [module.ec2-public]
 # Connection Block to connect to ec2 instance
 connection {
   type = "ssh"
   host = aws_eip.bastion_eip.public_ip
   user = "ec2-user"
   password = ""
-  private_key = file("private_key/eks-terraform-key.pem")
+  private_key = file("private-key/eks-terraform.pem")
 
 }  
 
 # file provisioners copies ssh pem key file to /tmp/eks-terraform-key.pem
    provisioner "file" {
-    source = "private_key/eks-terraform-key.pem"
-    destination = "/tmp/eks-terraform-key.pem"
+    source = "private-key/eks-terraform.pem"
+    destination = "/tmp/eks-terraform.pem"
      
    }
 # remote provisioners to run any commands or scripts in remote resources

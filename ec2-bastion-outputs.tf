@@ -2,7 +2,7 @@
 
 output "ec2_bastion_public_instance_ids" {
     description = "list of instance ids"
-    value = module.ec2_public.id
+    value = module.ec2-public.id
   
 }
 

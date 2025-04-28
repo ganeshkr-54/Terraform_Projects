@@ -14,7 +14,7 @@ resource "aws_eks_cluster" "eks_cluster" {
       service_ipv4_cidr = var.cluster_service_ipv4_cidr
     }
     # Enable EKS control plane logging
-    enabled_cluster_log_types = [ "api", "audit", "authenticator", "controlManager", "scheduler" ]
+    enabled_cluster_log_types = [ "api", "audit", "authenticator", "controllerManager", "scheduler" ]
   # Ensure that IAM Role permissions are created before and deleted
   # after EKS Cluster handling. Otherwise, EKS will not be able to
   # properly delete EKS managed EC2 infrastructure such as Security Groups.
