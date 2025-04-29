@@ -11,7 +11,7 @@ connection {
 
 }  
 
-# file provisioners copies ssh pem key file to /tmp/eks-terraform-key.pem
+# file provisioners copies ssh pem key file to /tmp/eks-terraform.pem
    provisioner "file" {
     source = "private-key/eks-terraform.pem"
     destination = "/tmp/eks-terraform.pem"
@@ -19,7 +19,7 @@ connection {
    }
 # remote provisioners to run any commands or scripts in remote resources
    provisioner "remote-exec" {
-    inline = [ "sudo chmod 400 /tmp/eks-terraform-key.pem" ]
+    inline = [ "sudo chmod 400 /tmp/eks-terraform.pem" ]
      
    }
 # local provisioners to run any commands or scripts in local machine

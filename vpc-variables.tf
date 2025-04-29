@@ -30,7 +30,7 @@ variable "vpc_public_subnets" {
 variable "vpc_database_subnets" {
     description = "database subnet range"
     type = list(string)
-    default =  ["10.0.151.0/24", "10.0.151.0/24"]   
+    default =  ["10.0.151.0/24", "10.0.152.0/24"]   
 }
 
 variable "vpc_create_database_subnet_group" {
