@@ -1,1 +1,1 @@
-# Terraform_Projects
+# EKS Cluster Creation using automated bash script
