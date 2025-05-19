@@ -4,11 +4,11 @@
 #
 ####################################################################
 
-# KK Playground. Cluster must be called 'demo-eks'
+# KK Playground. Cluster must be called 'demo_eks'
 variable "cluster_name" {
   type        = string
   description = "Name of the cluster"
-  default     = "demo-eks"
+  default     = "demo_eks"
 }
 
 # KK Playground. Cluster role must be called 'eksClusterRole'

@@ -10,5 +10,5 @@ resource "helm_release" "argocd" {
 
   values = [file("values/argocd.yaml")]
 
-  depends_on = [aws_iam_instance_profile.node_instance_profile]
+  depends_on = [aws_launch_template.node_launch_template]
   }
